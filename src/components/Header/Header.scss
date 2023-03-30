@@ -2,18 +2,39 @@
 @use "../../styles//partials/mixins" as *;
 
 .header {
+  background: $primary-background;
   &__wrap {
+    @include flex(space-between, center, row);
+    max-width: $desktop;
+    margin: 0 auto;
+    padding: 2rem 4rem 2rem 4rem;
   }
   &__logo {
+    width: 26rem;
+    height: 4rem;
   }
   &__icons {
+    @include flex(space-between, center, row);
   }
   &__search {
+    height: 2.4rem;
+    margin: 1.8rem;
   }
   &__profile-wrap {
+    @include flex(space-between, center, row);
+    padding: 1.1rem;
+    padding-right: 0;
+    margin: 1rem 0;
   }
   &__profile-icon {
+    height: 2.4rem;
   }
   &__login {
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: $primary-font;
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0 0.8rem;
   }
 }
