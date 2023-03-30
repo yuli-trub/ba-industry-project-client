@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 *,
 *::before,
 *::after {
@@ -11,4 +13,5 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Mylius;
+  color: $primary-font;
 }
