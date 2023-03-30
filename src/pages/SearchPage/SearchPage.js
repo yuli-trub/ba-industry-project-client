@@ -1,5 +1,6 @@
 import "./SearchPage.scss";
 import gbIcon from "../../assets/images/gb.png";
+import { Link } from "react-router-dom";
 
 const SearchPage = () => {
   return (
@@ -53,6 +54,62 @@ const SearchPage = () => {
               className="products__selected-arrow"
             />
           </ul>
+
+          <section className="search">
+            <div className="search__top">
+              <div className="search__top-left">
+                <h3 className="search__top-link search__top-link--active">
+                  Flights
+                </h3>
+                <h3 className="search__top-link">
+                  Multi City & Round the World
+                </h3>
+              </div>
+
+              <h3 className="search__explore">
+                Explore our flight destinations
+              </h3>
+            </div>
+            <div className="search__bottom">
+              <div className="search__bottom-left">
+                <div className="search__destination search__destination--from">
+                  <p className="search__label">From</p>
+                  <p className="search__text">London, London (All Airports)</p>
+                </div>
+                <div className="search__destination">
+                  <p className="search__label">To</p>
+                  <p className="search__text">
+                    New York, New York (All Airports)
+                  </p>
+                </div>
+              </div>
+              <div className="search__container">
+                <p className="search__title">Outbound</p>
+                <p className="search__date">08</p>
+                <p className="search__month">April</p>
+              </div>
+              <div className="search__container">
+                <p className="search__title">Return Date</p>
+                <p className="search__date">19</p>
+                <p className="search__month">April</p>
+              </div>
+              <div className="search__passengers">
+                <img
+                  src="https://www.britishairways.com/apps/ba-home/images/avatar_standard.svg"
+                  alt="passenger"
+                  className="search__pass-icon"
+                />
+                <div className="search__pass-wrap">
+                  <p className="search__label">Passengers</p>
+                  <p className="search__count">1 Adult</p>
+                </div>
+                {/* <img src="" alt="drop down arrow" className="search__arrow" /> */}
+              </div>
+              <Link to="/flight" className="search__link">
+                <img src="" alt="search icon" className="search__icon" />
+              </Link>{" "}
+            </div>
+          </section>
         </div>
       </main>
     </>

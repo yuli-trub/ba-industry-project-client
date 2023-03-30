@@ -108,3 +108,128 @@
     height: 1.5rem;
   }
 }
+
+.search {
+  width: 100rem;
+  height: 27rem;
+  background-color: $primary-background;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  &__top {
+    @include flex(space-between, center, row);
+    height: 7rem;
+    padding: 1rem 6.4rem 1.8rem;
+  }
+  &__top-left {
+    @include flex(space-between, center, row);
+  }
+  &__top-link {
+    color: #2a78cd;
+    margin: 2rem 2rem 0 0;
+    padding-left: 2rem;
+    font-weight: 700;
+    border-left: 2px solid $outline;
+    font-size: 1.6rem;
+    &--active {
+      border-bottom: 2px solid;
+      border-left: none;
+      padding: 0;
+    }
+  }
+
+  &__explore {
+    font-size: 1.6rem;
+    margin: 2rem 0 0 0;
+    font-weight: 400;
+  }
+  &__bottom {
+    @include flex(space-between, center, row);
+    padding: 0 6.4rem 4rem;
+  }
+  &__bottom-left {
+    @include flex(space-between, flex-start, column);
+  }
+  &__destination {
+    @include flex(space-around, flex-start, column);
+    width: 28rem;
+    height: 6.4rem;
+    border: 1px solid $outline;
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+
+    &--from {
+      margin-bottom: 1rem;
+    }
+  }
+  &__label {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+  &__text {
+    margin: 0;
+    font-weight: 700;
+    overflow: hidden;
+    width: 28rem;
+  }
+  &__container {
+    @include flex(space-between, center, column);
+    border: 1px solid $outline;
+    border-radius: 5px;
+    width: 14rem;
+    height: 14rem;
+    padding: 2.5rem 0;
+    margin-left: 1rem;
+  }
+  &__title {
+    color: #545454;
+    font-weight: 500;
+    margin: 0;
+  }
+  &__date {
+    font-size: 3rem;
+    color: #b73e3e;
+    margin: 1rem 0;
+  }
+  &__month {
+    margin: 0;
+  }
+  &__passengers {
+    @include flex(space-between, center, row);
+    border: 1px solid $outline;
+    border-radius: 5px;
+    width: 14rem;
+    height: 14rem;
+    padding: 2.5rem 1rem;
+    margin-left: 1rem;
+  }
+  &__pass-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  &__pass-wrap {
+    @include flex(space-between, flex-start, column);
+    width: 70%;
+  }
+  &__count {
+    margin: 0.4rem 0;
+    font-weight: 700;
+  }
+  &__arrow {
+  }
+  &__link {
+    border-radius: 5px;
+    width: 14rem;
+    height: 14rem;
+    padding: 2.5rem 0;
+    margin-left: 1rem;
+    background-color: $highlight;
+    text-align: center;
+  }
+  &__icon {
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: 3rem 0;
+  }
+}
