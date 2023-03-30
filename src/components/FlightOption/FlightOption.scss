@@ -1,0 +1,8 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.flight {
+  height: 14.8rem;
+  width: 100%;
+  background-color: $primary-background;
+}
