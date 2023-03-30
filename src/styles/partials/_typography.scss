@@ -1,23 +1,52 @@
 @font-face {
   font-family: "Mylius";
-  src: url("../../assets/fonts/MyliusModern-Bold.ttf");
+  src: url("../../assets/fonts/MyliusModern-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Mylius";
-  src: url("../../assets/fonts/MyliusModern-Regular.ttf");
+  src: url("../../assets/fonts/MyliusModern-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Mylius";
-  src: url("../../assets/fonts/MyliusModern-Light.ttf");
+  src: url("../../assets/fonts/MyliusModern-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Mylius";
-  src: url("../../assets/fonts/MyliusModern-ExtraLight.ttf");
+  src: url("../../assets/fonts/MyliusModern-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight: 200;
 }

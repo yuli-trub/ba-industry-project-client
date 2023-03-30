@@ -7,7 +7,7 @@
     @include flex(space-between, center, row);
     max-width: $desktop;
     margin: 0 auto;
-    padding: 2rem 4rem 2rem 4rem;
+    padding: 2rem 4rem 1.5rem 4rem;
   }
   &__logo {
     width: 26rem;
