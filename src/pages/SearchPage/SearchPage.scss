@@ -1,2 +1,110 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles//partials/mixins" as *;
+
+.nav {
+  @include flex(space-between, center, row);
+  border-top: 1px $secondary-background solid;
+  border-bottom: 1px $secondary-background solid;
+
+  &__list {
+    @include flex(space-between, center, row);
+    padding: 0;
+    padding-left: 2rem;
+    margin: 0;
+  }
+  &__item {
+    padding: 1rem 2rem;
+    list-style: none;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: lighter;
+    color: $label-font;
+  }
+}
+
+.lang {
+  &__wrap {
+    @include flex(space-between, baseline, row);
+    padding-right: 4rem;
+  }
+  &__icon {
+    width: 1.6rem;
+  }
+  &__text {
+    margin: 0;
+    font-weight: lighter;
+    font-size: 1.6rem;
+    margin-left: 0.9rem;
+  }
+}
+
+.main {
+  height: 108rem;
+  background-image: url(https://www.britishairways.com/assets/images/MediaHub/Media-Database/Royalty-free-RF/Destinations/USA/Florida/Orlando-MCO/524927017_1920x1080.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  &__bg-cover {
+    height: 108rem;
+    width: 100%;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85) 0,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0.05) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+.products {
+  width: 48rem;
+  margin: 0 auto;
+  padding: 7rem 0 4.6rem;
+  @include flex(space-between, center, row);
+  position: relative;
+
+  &__item {
+    background-color: $secondary-background;
+    @include flex(center, center, column);
+    list-style: none;
+    font-family: Roboto;
+    font-weight: 400;
+    width: 16rem;
+    height: 16rem;
+    margin: 0 0.1rem;
+
+    &--active {
+      background-color: $primary-background;
+      border-radius: 5px 0 0 5px;
+    }
+
+    &--right {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 5rem;
+    margin-top: 3.2rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $label-text;
+  }
+
+  &__red {
+    color: $highlight;
+  }
+
+  &__selected-arrow {
+    position: absolute;
+    top: 22.9rem;
+    left: 6.9rem;
+    width: 2.4rem;
+    height: 1.5rem;
+  }
+}
