@@ -1,0 +1,9 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles//partials/mixins" as *;
+
+.list {
+  background-color: $secondary-background;
+
+  &__wrapper {
+  }
+}
