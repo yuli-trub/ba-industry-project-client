@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import ListPage from "./pages/ListPage/ListPage";
 
+import "./App.scss";
+
 function App() {
   return (
     <BrowserRouter>
