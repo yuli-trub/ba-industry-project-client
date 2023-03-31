@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import line from "../../assets/images/line.png";
 import GallerySlider from "../GallerySlider/GallerySlider";
 import "./Modal.scss";
+import img1 from "../../assets/images/img_1.png";
+import img2 from "../../assets/images/img_2.png";
+import img3 from "../../assets/images/img_3.png";
+import img4 from "../../assets/images/img_4.png";
 import baggage from "../../assets/icons/baggage.png";
 import point from "../../assets/icons/point.svg";
 import drink from "../../assets/icons/drink.svg";
@@ -23,6 +27,7 @@ import { Link } from "react-router-dom";
 const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
   const [showPreFlight, setShowPreFlight] = useState(true);
   const [showInFlight, setShowInFlight] = useState(false);
+  const [isPriority, setIsPriority] = useState(true);
 
   const toggleRightHandle = () => {
     setShowPreFlight(false);
@@ -33,6 +38,11 @@ const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
     setShowInFlight(false);
     setShowPreFlight(true);
   };
+  const handleClass = () => {
+    setIsPriority(!isPriority);
+  };
+
+  const imagesFirst = [img1, img2, img3, img4];
 
   return (
     <section className="modal">
@@ -56,6 +66,7 @@ const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
             )}
 
             <Link
+              onClick={handleClass}
               className="classes__button classes__button--first"
               onMouseEnter={() => setIsFirstHovered(true)}
               onMouseLeave={() => setIsFirstHovered(false)}
@@ -80,13 +91,16 @@ const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
             <p className="classes__class">Premium Economy</p>
             <p className="classes__price">$889</p>
           </Link>
-          <Link className="classes__button classes__button--economy">
+          <Link
+            className="classes__button classes__button--economy"
+            onClick={handleClass}
+          >
             <p className="classes__class">Economy</p>
             <p className="classes__price">$766</p>
           </Link>
         </div>
       </div>
-      <div className="content">
+      <div className={`content ${isPriority ? "" : "content--hidden"}`}>
         <div className="content__info">
           <ul className="options">
             <li
@@ -134,6 +148,67 @@ const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
             <li className="features__item">
               <img src={key} alt="key" className="features__icon" />
               <p className="features__text">Lounge access</p>
+            </li>
+          </ul>
+          <ul className={`features ${showInFlight ? "" : "features--hidden"}`}>
+            <li className="features__item">
+              <img src={door} alt="door" className="features__icon" />
+              <p className="features__text">
+                Take your pick from the hundreds of latest films, television
+                programmes, audio books and games{" "}
+              </p>
+            </li>
+            <li className="features__item">
+              <img src={restaurant} alt="food" className="features__icon" />
+              <p className="features__text">
+                Enjoy a starter, main and dessert, with a choice of hot, cold
+                and alcoholic drinks
+              </p>
+            </li>
+            <li className="features__item">
+              <img src={briefcase} alt="briefcase" className="features__icon" />
+              <p className="features__text">
+                Increased overhead locker space for your belongings
+              </p>
+            </li>
+            <li className="features__item">
+              <img src={group} alt="gtoup" className="features__icon" />
+              <p className="features__text">
+                Priority rebooking and premium hotel offered when disrupted
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div className="gallery">
+          <GallerySlider images={imagesFirst} />
+        </div>
+      </div>
+      <div className={`content ${isPriority ? "content--hidden" : ""}`}>
+        <div className="content__info">
+          <ul className="options">
+            <li
+              onClick={toggleLeftHandle}
+              className={`options__item ${
+                showPreFlight ? "options__item--active" : ""
+              }`}
+            >
+              Pre-flight amenities
+            </li>
+            <li
+              onClick={toggleRightHandle}
+              className={`options__item ${
+                showInFlight ? "options__item--active" : ""
+              }`}
+            >
+              In-flight amenities
+            </li>
+          </ul>
+          <ul className={`features ${showPreFlight ? "" : "features--hidden"}`}>
+            <li className="features__item">
+              <img src={point} alt="user" className="features__icon" />
+              <p className="features__text">
+                Customary British Airways hospitality service
+              </p>
             </li>
           </ul>
           <ul className={`features ${showInFlight ? "" : "features--hidden"}`}>
@@ -207,7 +282,7 @@ const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
           </ul>
         </div>
         <div className="gallery">
-          <GallerySlider />
+          {/* <GallerySlider images={imagesEconomy} /> */}
         </div>
       </div>
     </section>

@@ -52,6 +52,7 @@
       margin-left: 15rem;
       &:hover {
         background-color: $highlight-hover;
+        cursor: pointer;
       }
     }
   }
@@ -204,7 +205,9 @@
 
 .content {
   @include flex(space-between, flex-start, row);
-
+  &--hidden {
+    display: none;
+  }
   &__info {
     width: 50%;
   }
@@ -221,8 +224,14 @@
     list-style: none;
     font-size: 2rem;
     padding: 1.5rem 0;
+    margin-bottom: -0.2rem;
+    border-bottom: 3px transparent solid;
+
     &--active {
       border-bottom: 3px $highlight solid;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 }

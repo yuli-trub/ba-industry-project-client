@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import "./GallerySlider.scss";
-import img1 from "../../assets/images/img_1.png";
-import img2 from "../../assets/images/img_2.png";
-import img3 from "../../assets/images/img_3.png";
-import img4 from "../../assets/images/img_4.png";
 import rightArrow from "../../assets/icons/scroll-right.png";
 import leftArrow from "../../assets/icons/scroll-left.png";
 
-const GallerySlider = () => {
+const GallerySlider = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const images = [img1, img2, img3, img4];
+  // const images = [img1, img2, img3, img4];
 
   const handleClickPrev = () => {
     setActiveIndex(activeIndex === 0 ? images.length - 1 : activeIndex - 1);
