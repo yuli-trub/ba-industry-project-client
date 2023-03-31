@@ -213,30 +213,10 @@ const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
           </ul>
           <ul className={`features ${showInFlight ? "" : "features--hidden"}`}>
             <li className="features__item">
-              <img src={macbook} alt="laptop" className="features__icon" />
-              <p className="features__text">
-                Work or sleep from your seat with a fully lie-flat bed
-              </p>
-            </li>
-            <li className="features__item">
               <img src={door} alt="door" className="features__icon" />
               <p className="features__text">
                 Club Suite: window and aisle access from all suites, with a
                 sliding privacy door and generous storage{" "}
-              </p>
-            </li>
-            <li className="features__item">
-              <img src={bottle} alt="bottle" className="features__icon" />
-              <p className="features__text">
-                A bespoke selection of high-quality wines, chosen by our very
-                own Master of Wine
-              </p>
-            </li>
-            <li className="features__item">
-              <img src={user} alt="somelier" className="features__icon" />
-              <p className="features__text">
-                Sommelier trained crew & trained to have every meal placed
-                perfectly
               </p>
             </li>
             <li className="features__item">
@@ -246,37 +226,11 @@ const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
                 options to fit your needs
               </p>
             </li>
-            <li className="features__item">
-              <img src={cake} alt="cake" className="features__icon" />
-              <p className="features__text">
-                Access to the Club Kitchen onboard, for a range of on-demand
-                snacks and refreshments
-              </p>
-            </li>
-            <li className="features__item">
-              <img src={sanitizer} alt="sanitizer" className="features__icon" />
-              <p className="features__text">
-                Amenity kit, bedding and pillow designed for you by The White
-                Company
-              </p>
-            </li>
+
             <li className="features__item">
               <img src={briefcase} alt="briefcase" className="features__icon" />
               <p className="features__text">
                 Increased overhead locker space for your belongings
-              </p>
-            </li>
-            <li className="features__item">
-              <img src={group} alt="gtoup" className="features__icon" />
-              <p className="features__text">
-                Priority rebooking and premium hotel offered when disrupted
-              </p>
-            </li>
-            <li className="features__item">
-              <img src={cart} alt="cart" className="features__icon" />
-              <p className="features__text">
-                Priority baggage arrival at T5, for a stress-free end to your
-                journey
               </p>
             </li>
           </ul>
