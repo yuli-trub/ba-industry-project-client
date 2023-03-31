@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./GallerySlider.scss";
-import ImageGallery from "react-image-gallery";
 import img1 from "../../assets/images/img_1.png";
 import img2 from "../../assets/images/img_2.png";
 import img3 from "../../assets/images/img_3.png";
@@ -26,7 +25,7 @@ const GallerySlider = () => {
         <img
           className="gallery-slider__image"
           src={images[activeIndex]}
-          alt={`Image ${activeIndex + 1}`}
+          alt={` ${activeIndex + 1}`}
         />
       </div>
       <div className="gallery-slider__bullet-points">
@@ -44,12 +43,14 @@ const GallerySlider = () => {
       </div>
       <img
         src={leftArrow}
+        alt="leisure"
         className="gallery-slider__arrow gallery-slider__arrow--prev"
         onClick={handleClickPrev}
       />
 
       <img
         src={rightArrow}
+        alt="business"
         className="gallery-slider__arrow gallery-slider__arrow--next"
         onClick={handleClickNext}
       />

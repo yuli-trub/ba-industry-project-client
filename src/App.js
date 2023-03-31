@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+<<<<<<< HEAD
 import { useState } from "react";
 
+=======
+>>>>>>> develop
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import ListPage from "./pages/ListPage/ListPage";
-
 import "./App.scss";
-import Modal from "./components/Modal/Modal";
 
 function App() {
   const [isFirstHovered, setIsFirstHovered] = useState(false);
