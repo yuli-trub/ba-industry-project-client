@@ -86,12 +86,12 @@ const SearchPage = () => {
               </div>
               <div className="search__container">
                 <p className="search__title">Outbound</p>
-                <p className="search__date">08</p>
+                <p className="search__date">06</p>
                 <p className="search__month">April</p>
               </div>
               <div className="search__container">
                 <p className="search__title">Return Date</p>
-                <p className="search__date">19</p>
+                <p className="search__date">09</p>
                 <p className="search__month">April</p>
               </div>
               <div className="search__passengers">
