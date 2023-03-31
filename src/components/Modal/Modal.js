@@ -31,6 +31,7 @@ import restaurant from "../../assets/icons/restaurant-line.svg";
 import user from "../../assets/icons/user.svg";
 import ribbon from "../../assets/icons/ribbon.svg";
 import exit from "../../assets/icons/exit.svg";
+import hospitality from "../../assets/icons/hospitality.svg";
 
 import { Link } from "react-router-dom";
 
@@ -284,7 +285,7 @@ const Modal = ({ setModalIsShown }) => {
               className={`features ${showPreFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
-                <img src={point} alt="user" className="features__icon" />
+                <img src={hospitality} alt="user" className="features__icon" />
                 <p className="features__text">
                   Customary British Airways hospitality service
                 </p>
