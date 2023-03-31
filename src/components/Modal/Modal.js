@@ -7,6 +7,16 @@ const Modal = () => {
   const [showPreFlight, setShowPreFlight] = useState(true);
   const [showInFlight, setShowInFlight] = useState(false);
 
+  const toggleRightHandle = () => {
+    setShowPreFlight(false);
+    setShowInFlight(true);
+  };
+
+  const toggleLeftHandle = () => {
+    setShowInFlight(false);
+    setShowPreFlight(true);
+  };
+
   return (
     <section className="modal">
       <header className="modal__header">
@@ -26,6 +36,7 @@ const Modal = () => {
         <div className="content__info">
           <ul className="options">
             <li
+              onClick={toggleLeftHandle}
               className={`options__item ${
                 showPreFlight ? "options__item--active" : ""
               }`}
@@ -33,6 +44,7 @@ const Modal = () => {
               Pre-flight amenities
             </li>
             <li
+              onClick={toggleRightHandle}
               className={`options__item ${
                 showInFlight ? "options__item--active" : ""
               }`}

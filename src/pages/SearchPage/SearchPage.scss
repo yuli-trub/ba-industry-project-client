@@ -227,6 +227,9 @@
     margin-left: 1rem;
     background-color: $highlight;
     text-align: center;
+    &:hover {
+      background-color: $highlight-hover;
+    }
   }
   &__icon {
     height: 3.5rem;

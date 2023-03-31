@@ -56,10 +56,6 @@
     transition: background-color 0.2s ease;
   }
 
-  &__arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
   &__arrow--prev {
     left: 20px;
   }
