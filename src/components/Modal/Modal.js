@@ -52,7 +52,7 @@ const Modal = () => {
               In-flight amenities
             </li>
           </ul>
-          <ul className="features">
+          <ul className={`features ${showPreFlight ? "" : "features--hidden"}`}>
             <li className="features__item">
               <img src="" alt="" className="features__icon" />
               <p className="features__text">
@@ -82,7 +82,7 @@ const Modal = () => {
               <p className="features__text">Lounge access</p>
             </li>
           </ul>
-          <ul className="features">
+          <ul className={`features ${showInFlight ? "" : "features--hidden"}`}>
             <li className="features__item">
               <img src="" alt="" className="features__icon" />
               <p className="features__text">
