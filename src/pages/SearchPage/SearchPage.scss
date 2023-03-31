@@ -5,6 +5,7 @@
   @include flex(space-between, center, row);
   border-top: 1px $secondary-background solid;
   border-bottom: 1px $secondary-background solid;
+  max-width: $desktop;
 
   &__list {
     @include flex(space-between, center, row);
@@ -226,6 +227,9 @@
     margin-left: 1rem;
     background-color: $highlight;
     text-align: center;
+    &:hover {
+      background-color: $highlight-hover;
+    }
   }
   &__icon {
     height: 3.5rem;

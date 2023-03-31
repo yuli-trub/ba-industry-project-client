@@ -1,0 +1,66 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles//partials/mixins" as *;
+
+.gallery-slider {
+  position: relative;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 5px;
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__bullet-points {
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__bullet-point {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: $secondary-scroll;
+  }
+
+  &__bullet-point--active {
+    background-color: $primary-button;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: -4.5rem;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  &__arrow--prev {
+    left: 20px;
+  }
+
+  &__arrow--next {
+    right: 20px;
+  }
+}

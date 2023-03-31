@@ -1,6 +1,14 @@
+import { useState } from "react";
+import Modal from "../../components/Modal/Modal";
 import "./ListPage.scss";
 
 const ListPage = () => {
+  const [modalIsShown, setModalIsShown] = useState(false);
+
+  const clickHandler = () => {
+    setModalIsShown(true);
+  };
+
   return (
     <section className="list">
       <div className="list__wrapper">
@@ -67,6 +75,8 @@ const ListPage = () => {
           <p className="times__departures">London Heathrow (LHR) Departures</p>
         </div>
       </div>
+      <button onClick={clickHandler}>Show modal</button>
+      {modalIsShown && <Modal />}
     </section>
   );
 };

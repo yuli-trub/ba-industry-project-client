@@ -1,0 +1,115 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles//partials/mixins" as *;
+
+.modal {
+  width: 102.4rem;
+  height: 94.4rem;
+  margin: 0 auto;
+  background-color: $header-bg;
+  border-radius: 5px;
+  &__header {
+    @include flex(space-between, center, row);
+    padding: 2rem 1.6rem;
+
+    &__timing {
+      @include flex(space-between, center, row);
+
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    &__time {
+      margin: 0;
+      margin-right: 0.8rem;
+    }
+    &__airport {
+      margin: 0;
+    }
+    &__line {
+      margin: 0 0.4rem;
+      width: 3.2rem;
+    }
+    &__duration {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    &__link {
+      letter-spacing: 18%;
+      font-weight: 300;
+      font-size: 1.2rem;
+      text-decoration: underline;
+      color: $secondary-font;
+    }
+    &__btn {
+      background-color: $highlight;
+      height: 4rem;
+      width: 24.6rem;
+      color: $light-text;
+      border: none;
+      border-radius: 5px;
+      line-height: 2.4rem;
+      font-size: 1.6rem;
+      margin-left: 15rem;
+      &:hover {
+        background-color: $highlight-hover;
+      }
+    }
+  }
+}
+
+.content {
+  @include flex(space-between, flex-start, row);
+
+  &__info {
+    width: 50%;
+  }
+}
+
+.options {
+  @include flex(space-between, center, row);
+  width: 42rem;
+  margin: 0 auto;
+  border-bottom: 1px #666666 solid;
+  padding: 0 2rem;
+
+  &__item {
+    list-style: none;
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    &--active {
+      border-bottom: 3px $highlight solid;
+    }
+  }
+}
+
+.features {
+  @include flex(space-between, flex-start, column);
+  margin: 0 auto;
+  width: 42rem;
+  padding: 0;
+  padding-top: 2rem;
+
+  &__item {
+    @include flex(flex-start, center, row);
+    // padding: 2rem;
+    padding-left: 0;
+    border-bottom: 1px #140e0e solid;
+    width: 42rem;
+    height: 6.4rem;
+    font-family: "Mylius";
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1.2rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+}
+
+.gallery {
+  width: 39%;
+  margin: 0 5.2rem;
+}
