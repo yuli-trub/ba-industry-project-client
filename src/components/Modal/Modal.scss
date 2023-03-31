@@ -234,13 +234,17 @@
   padding: 0;
   padding-top: 2rem;
 
+  &--hidden {
+    display: none;
+  }
+
   &__item {
     @include flex(flex-start, center, row);
     // padding: 2rem;
     padding-left: 0;
     border-bottom: 1px #140e0e solid;
     width: 42rem;
-    height: 6.4rem;
+
     font-family: "Mylius";
   }
 
@@ -252,6 +256,7 @@
 
   &__text {
     font-size: 1.6rem;
+    margin: 2rem 0;
   }
 }
 
