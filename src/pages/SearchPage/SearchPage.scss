@@ -159,6 +159,10 @@
     border-radius: 5px;
     padding: 0.4rem 1rem;
 
+    &:hover {
+      background-color: $secondary-background;
+    }
+
     &--from {
       margin-bottom: 1rem;
     }
@@ -182,6 +186,9 @@
     height: 14rem;
     padding: 2.5rem 0;
     margin-left: 1rem;
+    &:hover {
+      background-color: $secondary-background;
+    }
   }
   &__title {
     color: #545454;
@@ -204,6 +211,9 @@
     height: 14rem;
     padding: 2.5rem 1rem;
     margin-left: 1rem;
+    &:hover {
+      background-color: $secondary-background;
+    }
   }
   &__pass-icon {
     width: 2.4rem;

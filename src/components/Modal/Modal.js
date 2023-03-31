@@ -94,7 +94,7 @@ const Modal = ({ setModalIsShown }) => {
                 className="classes__button classes__button--first"
               >
                 <p className="classes__class">First</p>
-                <p className="classes__price">$1,638</p>
+                <p className="classes__price">£1,638</p>
               </Link>
               <div className="classes__value">
                 <img
@@ -109,27 +109,27 @@ const Modal = ({ setModalIsShown }) => {
             </div>
             <Link className="classes__button classes__button--business">
               <p className="classes__class">Business</p>
-              <p className="classes__price">$1,209</p>
+              <p className="classes__price">£1,209</p>
             </Link>
             <Link className="classes__button classes__button--premium">
               <p className="classes__class">Premium Economy</p>
-              <p className="classes__price">$889</p>
+              <p className="classes__price">£889</p>
             </Link>
             <Link
               className="classes__button classes__button--economy"
               onClick={handleEconomyClass}
             >
               <p className="classes__class">Economy</p>
-              <p className="classes__price">$766</p>
+              <p className="classes__price">£766</p>
             </Link>
           </div>
         </div>
-        <div className={`content ${isEconomy ? "content--hidden" : ""}`}>
+        <div className={`content £{isEconomy ? "content--hidden" : ""}`}>
           <div className="content__info">
             <ul className="options">
               <li
                 onClick={toggleLeftHandle}
-                className={`options__item ${
+                className={`options__item £{
                   showPreFlight ? "options__item--active" : ""
                 }`}
               >
@@ -137,7 +137,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
               <li
                 onClick={toggleRightHandle}
-                className={`options__item ${
+                className={`options__item £{
                   showInFlight ? "options__item--active" : ""
                 }`}
               >
@@ -145,7 +145,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features ${showPreFlight ? "" : "features--hidden"}`}
+              className={`features £{showPreFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={point} alt="user" className="features__icon" />
@@ -177,7 +177,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features ${showInFlight ? "" : "features--hidden"}`}
+              className={`features £{showInFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={macbook} alt="laptop" className="features__icon" />
@@ -261,12 +261,12 @@ const Modal = ({ setModalIsShown }) => {
           </div>
         </div>
 
-        <div className={`content ${isPriority ? "content--hidden" : ""}`}>
+        <div className={`content £{isPriority ? "content--hidden" : ""}`}>
           <div className="content__info">
             <ul className="options">
               <li
                 onClick={toggleLeftHandle}
-                className={`options__item ${
+                className={`options__item £{
                   showPreFlight ? "options__item--active" : ""
                 }`}
               >
@@ -274,7 +274,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
               <li
                 onClick={toggleRightHandle}
-                className={`options__item ${
+                className={`options__item £{
                   showInFlight ? "options__item--active" : ""
                 }`}
               >
@@ -282,7 +282,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features ${showPreFlight ? "" : "features--hidden"}`}
+              className={`features £{showPreFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={hospitality} alt="user" className="features__icon" />
@@ -292,7 +292,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features ${showInFlight ? "" : "features--hidden"}`}
+              className={`features £{showInFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={door} alt="door" className="features__icon" />

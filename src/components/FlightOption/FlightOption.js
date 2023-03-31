@@ -75,20 +75,20 @@ const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
                 onClick={clickHandler}
               >
                 <p className="option__class">First</p>
-                <p className="option__price">$1,638</p>
+                <p className="option__price">£1,638</p>
               </Link>
             </div>
             <Link className="option__button option__button--business">
               <p className="option__class">Business</p>
-              <p className="option__price">$1,209</p>
+              <p className="option__price">£1,209</p>
             </Link>
             <Link className="option__button option__button--premium">
               <p className="option__class">Premium Economy</p>
-              <p className="option__price">$889</p>
+              <p className="option__price">£889</p>
             </Link>
             <Link className="option__button option__button--economy">
               <p className="option__class">Economy</p>
-              <p className="option__price">$766</p>
+              <p className="option__price">£766</p>
             </Link>
           </div>
         </div>
