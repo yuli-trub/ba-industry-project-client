@@ -1,4 +1,5 @@
 import "./ListPage.scss";
+import FlightOption from "../../components/FlightOption/FlightOption";
 
 const ListPage = () => {
   return (
@@ -65,6 +66,13 @@ const ListPage = () => {
         <div className="times">
           <p className="times__direct">Direct Flights</p>
           <p className="times__departures">London Heathrow (LHR) Departures</p>
+          <div className="flightoptions">
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
+          </div>
         </div>
       </div>
     </section>
