@@ -86,34 +86,13 @@ const ListPage = () => {
               isFirstHovered={isFirstHovered}
               setIsFirstHovered={setIsFirstHovered}
             />
-            <FlightOption
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
-            <FlightOption
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
-            <FlightOption
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
-            <FlightOption
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
-            <FlightOption
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
-            <FlightOption
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
-            <FlightOption
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
+            <FlightOption />
           </div>
         </div>
       </div>
