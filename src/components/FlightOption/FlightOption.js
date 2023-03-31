@@ -1,7 +1,10 @@
 import "./FlightOption.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const FlightOption = () => {
+  const [isFirstHovered, setIsFirstHovered] = useState(false);
+
   return (
     <>
       <section className="option">
@@ -9,7 +12,11 @@ const FlightOption = () => {
           <h2 className="option__time">07:55 JFK --- 19:35 LHR</h2>
           <div className="option__airline">
             <p className="option__ba">British Airways</p>
-            <img src="#" alt="british airways logo" />
+            <img
+              src="https://www.britishairways.com/cms/global/assets/images/site/icon/ffsbeta/balogo.svg"
+              alt="british airways logo"
+              className="option__logo"
+            />
           </div>
           <div className="option__metrics">
             <p className="option__stops">Non-stop</p>
@@ -22,10 +29,20 @@ const FlightOption = () => {
 
         <div className="option__right">
           <div className="option__classes">
-            <Link className="option__button option__button--first">
-              <p className="option__class">First</p>
-              <p className="option__price">$1,638</p>
-            </Link>
+            <div className="option__firstclass">
+              {isFirstHovered && (
+                <p className="option__animation">Free On-Board Drink</p>
+              )}
+
+              <Link
+                className="option__button option__button--first"
+                onMouseEnter={() => setIsFirstHovered(true)}
+                onMouseLeave={() => setIsFirstHovered(false)}
+              >
+                <p className="option__class">First</p>
+                <p className="option__price">$1,638</p>
+              </Link>
+            </div>
             <Link className="option__button option__button--business">
               <p className="option__class">Business</p>
               <p className="option__price">$1,209</p>

@@ -38,15 +38,24 @@
 
   &__return {
     display: flex;
+    gap: 0.5rem;
   }
 
   &__date {
     margin: 0;
   }
 
+  &__icon {
+    margin-top: 0.25rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-top: 0.25rem;
+  }
+
   &__edit {
     color: $secondary-font;
     display: flex;
+    gap: 0.75rem;
   }
 
   &__edit-text {
@@ -78,7 +87,7 @@
 
   &__dates {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: $primary-background;
     height: 7.6rem;
     color: $primary-font;

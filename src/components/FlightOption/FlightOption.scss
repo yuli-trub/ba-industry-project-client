@@ -28,10 +28,18 @@
 
   &__airline {
     display: flex;
+    gap: 1rem;
   }
 
   &__ba {
     margin: 0;
+  }
+
+  &__logo {
+    width: 3rem;
+
+    position: relative;
+    bottom: 0.05rem;
   }
 
   &__metrics {
@@ -56,6 +64,19 @@
   &__right {
     display: flex;
     align-items: center;
+    position: relative;
+  }
+
+  &__firstclass {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__animation {
+    margin: 0;
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
   }
 
   &__classes {
@@ -66,6 +87,7 @@
   }
 
   &__button {
+    font-family: Mylius;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,6 +99,7 @@
     gap: 1.7rem;
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    border: none;
 
     &:hover {
       transform: scale(1.05);
@@ -102,10 +125,4 @@
     background-color: $button-economy;
     color: $primary-font;
   }
-}
-
-.flightoptions {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }

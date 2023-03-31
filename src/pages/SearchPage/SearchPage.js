@@ -1,6 +1,7 @@
 import "./SearchPage.scss";
 import gbIcon from "../../assets/images/gb.png";
 import { Link } from "react-router-dom";
+import searchIcon from "../../assets/icons/search-icon.svg";
 
 const SearchPage = () => {
   return (
@@ -106,7 +107,11 @@ const SearchPage = () => {
                 {/* <img src="" alt="drop down arrow" className="search__arrow" /> */}
               </div>
               <Link to="/flight" className="search__link">
-                <img src="" alt="search icon" className="search__icon" />
+                <img
+                  src={searchIcon}
+                  alt="search icon"
+                  className="search__icon"
+                />
               </Link>{" "}
             </div>
           </section>
