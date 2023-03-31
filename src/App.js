@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -9,12 +10,22 @@ import "./App.scss";
 import Modal from "./components/Modal/Modal";
 
 function App() {
+  const [isFirstHovered, setIsFirstHovered] = useState(false);
+
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<SearchPage />} />
-        <Route path="/flight" element={<ListPage />} />
+        <Route
+          path="/flight"
+          element={
+            <ListPage
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+          }
+        />
       </Routes>
       <Footer />
     </BrowserRouter>
