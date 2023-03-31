@@ -23,6 +23,7 @@
   margin: 0 auto;
   background-color: $header-bg;
   border-radius: 5px;
+
   &__header {
     @include flex(space-between, center, row);
     padding: 2rem 1.6rem;
@@ -48,6 +49,7 @@
       margin: 0;
       font-size: 1.6rem;
     }
+
     &__link {
       letter-spacing: 18%;
       font-weight: 300;
@@ -55,6 +57,7 @@
       text-decoration: underline;
       color: $secondary-font;
     }
+
     &__btn {
       background-color: $highlight;
       height: 4rem;
@@ -64,9 +67,20 @@
       border-radius: 5px;
       line-height: 2.4rem;
       font-size: 1.6rem;
-      margin-left: 15rem;
+      margin-left: 10rem;
+      margin-right: -3.6rem;
       &:hover {
         background-color: $highlight-hover;
+        cursor: pointer;
+      }
+    }
+
+    &__exit {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: 0.5rem;
+
+      &:hover {
         cursor: pointer;
       }
     }
@@ -226,6 +240,7 @@
   }
   &__info {
     width: 50%;
+    padding: 0 7.9rem;
   }
 }
 

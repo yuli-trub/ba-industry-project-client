@@ -30,6 +30,8 @@ import macbook from "../../assets/icons/macbook-line.svg";
 import restaurant from "../../assets/icons/restaurant-line.svg";
 import user from "../../assets/icons/user.svg";
 import ribbon from "../../assets/icons/ribbon.svg";
+import exit from "../../assets/icons/exit.svg";
+
 import { Link } from "react-router-dom";
 
 const Modal = ({ setModalIsShown }) => {
@@ -73,14 +75,15 @@ const Modal = ({ setModalIsShown }) => {
           </div>
           <p className="modal__header__duration">Non-stop 6h 40m</p>
           <p className="modal__header__link">FLIGHT DETAILS</p>
-          <button
+          <button className="modal__header__btn">Select this flight</button>
+          <img
+            src={exit}
+            alt="exit"
             onClick={() => {
               setModalIsShown(false);
             }}
-            className="modal__header__btn"
-          >
-            Select this flight
-          </button>
+            className="modal__header__exit"
+          />
         </header>
         <div className="classes">
           <div className="classes__classes">

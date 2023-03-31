@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Modal from "../../components/Modal/Modal";
 import "./ListPage.scss";
 import FlightOption from "../../components/FlightOption/FlightOption";
 import switchArrows from "../../assets/icons/switch-arrows.svg";
