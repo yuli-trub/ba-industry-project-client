@@ -1,6 +1,7 @@
 import "./FlightOption.scss";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Modal from "../Modal/Modal";
 
 const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
   const amenities = [
@@ -17,6 +18,11 @@ const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
   ];
 
   const [currentAmenityIndex, setCurrentAmenityIndex] = useState(0);
+  const [modalIsShown, setModalIsShown] = useState(false);
+
+  const clickHandler = () => {
+    setModalIsShown(true);
+  };
 
   useEffect(() => {
     if (isFirstHovered) {
@@ -66,6 +72,7 @@ const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
                 className="option__button option__button--first"
                 onMouseEnter={() => setIsFirstHovered(true)}
                 onMouseLeave={() => setIsFirstHovered(false)}
+                onClick={clickHandler}
               >
                 <p className="option__class">First</p>
                 <p className="option__price">$1,638</p>
@@ -85,6 +92,7 @@ const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
             </Link>
           </div>
         </div>
+        {modalIsShown && <Modal setModalIsShown={setModalIsShown} />}
       </section>
     </>
   );

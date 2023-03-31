@@ -7,22 +7,12 @@ import "./App.scss";
 import { useState } from "react";
 
 function App() {
-  const [isFirstHovered, setIsFirstHovered] = useState(false);
-
   return (
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<SearchPage />} />
-        <Route
-          path="/flight"
-          element={
-            <ListPage
-              isFirstHovered={isFirstHovered}
-              setIsFirstHovered={setIsFirstHovered}
-            />
-          }
-        />
+        <Route path="/flight" element={<ListPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

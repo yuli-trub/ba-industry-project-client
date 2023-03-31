@@ -7,12 +7,8 @@ import downArrow from "../../assets/icons/down-arrow.svg";
 import rightArrow from "../../assets/icons/right-arrow.svg";
 import leftArrow from "../../assets/icons/left-arrow.svg";
 
-const ListPage = ({ isFirstHovered, setIsFirstHovered }) => {
-  const [modalIsShown, setModalIsShown] = useState(false);
-
-  const clickHandler = () => {
-    setModalIsShown(true);
-  };
+const ListPage = () => {
+  const [isFirstHovered, setIsFirstHovered] = useState(false);
 
   return (
     <section className="list">
@@ -86,19 +82,42 @@ const ListPage = ({ isFirstHovered, setIsFirstHovered }) => {
           <p className="times__direct">Direct Flights</p>
           <p className="times__departures">London Heathrow (LHR) Departures</p>
 
-          <FlightOption
-            isFirstHovered={isFirstHovered}
-            setIsFirstHovered={setIsFirstHovered}
-          />
+          <div className="all">
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+            <FlightOption
+              isFirstHovered={isFirstHovered}
+              setIsFirstHovered={setIsFirstHovered}
+            />
+          </div>
         </div>
       </div>
-      <button onClick={clickHandler}>Show modal</button>
-      {modalIsShown && (
-        <Modal
-          isFirstHovered={isFirstHovered}
-          setIsFirstHovered={setIsFirstHovered}
-        />
-      )}
     </section>
   );
 };
