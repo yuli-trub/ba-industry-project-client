@@ -7,7 +7,7 @@ import downArrow from "../../assets/icons/down-arrow.svg";
 import rightArrow from "../../assets/icons/right-arrow.svg";
 import leftArrow from "../../assets/icons/left-arrow.svg";
 
-const ListPage = () => {
+const ListPage = ({ isFirstHovered, setIsFirstHovered }) => {
   const [modalIsShown, setModalIsShown] = useState(false);
 
   const clickHandler = () => {
@@ -86,11 +86,19 @@ const ListPage = () => {
           <p className="times__direct">Direct Flights</p>
           <p className="times__departures">London Heathrow (LHR) Departures</p>
 
-          <FlightOption />
+          <FlightOption
+            isFirstHovered={isFirstHovered}
+            setIsFirstHovered={setIsFirstHovered}
+          />
         </div>
       </div>
       <button onClick={clickHandler}>Show modal</button>
-      {modalIsShown && <Modal />}
+      {modalIsShown && (
+        <Modal
+          isFirstHovered={isFirstHovered}
+          setIsFirstHovered={setIsFirstHovered}
+        />
+      )}
     </section>
   );
 };

@@ -17,8 +17,10 @@ import sanitizer from "../../assets/icons/hand-sanitizer-line.svg";
 import macbook from "../../assets/icons/macbook-line.svg";
 import restaurant from "../../assets/icons/restaurant-line.svg";
 import user from "../../assets/icons/user.svg";
+import ribbon from "../../assets/icons/ribbon.svg";
+import { Link } from "react-router-dom";
 
-const Modal = () => {
+const Modal = ({ isFirstHovered, setIsFirstHovered }) => {
   const [showPreFlight, setShowPreFlight] = useState(true);
   const [showInFlight, setShowInFlight] = useState(false);
 
@@ -46,7 +48,44 @@ const Modal = () => {
         <p className="modal__header__link">FLIGHT DETAILS</p>
         <button className="modal__header__btn">Select this flight</button>
       </header>
-      {/* copy Adam's list */}
+      <div className="classes">
+        <div className="classes__classes">
+          <div className="classes__firstclass">
+            {isFirstHovered && (
+              <p className="classes__animation">Free On-Board Drink</p>
+            )}
+
+            <Link
+              className="classes__button classes__button--first"
+              onMouseEnter={() => setIsFirstHovered(true)}
+              onMouseLeave={() => setIsFirstHovered(false)}
+            >
+              <p className="classes__class">First</p>
+              <p className="classes__price">$1,638</p>
+            </Link>
+            <div className="classes__value">
+              <img
+                src={ribbon}
+                alt="value ribbon"
+                className="classes__value-icon"
+              />
+              <p className="classes__value-text">Voted best value for money</p>
+            </div>
+          </div>
+          <Link className="classes__button classes__button--business">
+            <p className="classes__class">Business</p>
+            <p className="classes__price">$1,209</p>
+          </Link>
+          <Link className="classes__button classes__button--premium">
+            <p className="classes__class">Premium Economy</p>
+            <p className="classes__price">$889</p>
+          </Link>
+          <Link className="classes__button classes__button--economy">
+            <p className="classes__class">Economy</p>
+            <p className="classes__price">$766</p>
+          </Link>
+        </div>
+      </div>
       <div className="content">
         <div className="content__info">
           <ul className="options">

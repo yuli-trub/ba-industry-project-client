@@ -2,9 +2,7 @@ import "./FlightOption.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const FlightOption = () => {
-  const [isFirstHovered, setIsFirstHovered] = useState(false);
-
+const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
   return (
     <>
       <section className="option">
