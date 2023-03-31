@@ -91,7 +91,7 @@ const SearchPage = () => {
               </div>
               <div className="search__container">
                 <p className="search__title">Return Date</p>
-                <p className="search__date">09</p>
+                <p className="search__date">9</p>
                 <p className="search__month">April</p>
               </div>
               <div className="search__passengers">
