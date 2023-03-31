@@ -1,8 +1,36 @@
 import "./FlightOption.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
+  const amenities = [
+    "Pre-take off drink",
+    "Lounge access",
+    "Dedicated check-in",
+    "2 bags included (32 kg)",
+    "Extra leg room",
+    "Fully lie-flat bed",
+    "Multi-course dining",
+    "On-demand snacks",
+    "Fast track security",
+    "Free amenity kit",
+  ];
+
+  const [currentAmenityIndex, setCurrentAmenityIndex] = useState(0);
+
+  useEffect(() => {
+    if (isFirstHovered) {
+      const interval = setInterval(() => {
+        setCurrentAmenityIndex(
+          (prevIndex) => (prevIndex + 1) % amenities.length
+        );
+      }, 1500); // Change the interval (in milliseconds) to your desired speed
+      return () => clearInterval(interval);
+    } else {
+      setCurrentAmenityIndex(0);
+    }
+  }, [isFirstHovered]);
+
   return (
     <>
       <section className="option">
@@ -29,7 +57,9 @@ const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
           <div className="option__classes">
             <div className="option__firstclass">
               {isFirstHovered && (
-                <p className="option__animation">Free On-Board Drink</p>
+                <p className="option__animation">
+                  {amenities[currentAmenityIndex]}
+                </p>
               )}
 
               <Link
