@@ -74,7 +74,9 @@ const Modal = ({ setModalIsShown }) => {
           <p className="modal__header__duration">Non-stop 6h 40m</p>
           <p className="modal__header__link">FLIGHT DETAILS</p>
           <button
-            onClick={setModalIsShown(false)}
+            onClick={() => {
+              setModalIsShown(false);
+            }}
             className="modal__header__btn"
           >
             Select this flight
