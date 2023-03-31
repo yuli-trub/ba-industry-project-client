@@ -1,0 +1,128 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.option {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: $primary-background;
+  height: 14.8rem;
+  padding: 1.6rem;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+
+  &__left {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-weight: 200;
+  }
+
+  &__time {
+    font-size: 2.4rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+
+  &__airline {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__ba {
+    margin: 0;
+  }
+
+  &__logo {
+    width: 3rem;
+
+    position: relative;
+    bottom: 0.05rem;
+  }
+
+  &__metrics {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__stops {
+    margin: 0;
+  }
+
+  &__duration {
+    margin: 0;
+  }
+
+  &__details {
+    font-size: 1.2rem;
+    color: $secondary-font;
+    letter-spacing: 0.18rem;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__firstclass {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__animation {
+    margin: 0;
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+  }
+
+  &__classes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__button {
+    font-family: Mylius;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 17rem;
+    height: 6.2rem;
+    border-radius: 0.5rem;
+    padding: 1.6rem 1.2rem;
+    gap: 1.7rem;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    border: none;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__button--first {
+    background-color: $button-first;
+    color: $primary-background;
+  }
+
+  &__button--business {
+    background-color: $button-business;
+    color: $primary-background;
+  }
+
+  &__button--premium {
+    background-color: $button-premium;
+    color: $primary-background;
+  }
+
+  &__button--economy {
+    background-color: $button-economy;
+    color: $primary-font;
+  }
+}
