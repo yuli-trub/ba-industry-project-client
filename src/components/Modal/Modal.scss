@@ -205,6 +205,7 @@
 
 .content {
   @include flex(space-between, flex-start, row);
+
   &--hidden {
     display: none;
   }
