@@ -5,6 +5,7 @@
   @include flex(space-between, center, row);
   border-top: 1px $secondary-background solid;
   border-bottom: 1px $secondary-background solid;
+  max-width: $desktop;
 
   &__list {
     @include flex(space-between, center, row);

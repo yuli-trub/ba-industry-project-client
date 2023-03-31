@@ -6,6 +6,7 @@ import SearchPage from "./pages/SearchPage/SearchPage";
 import ListPage from "./pages/ListPage/ListPage";
 
 import "./App.scss";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   return (
