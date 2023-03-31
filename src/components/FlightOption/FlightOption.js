@@ -30,7 +30,7 @@ const FlightOption = ({ isFirstHovered, setIsFirstHovered }) => {
         setCurrentAmenityIndex(
           (prevIndex) => (prevIndex + 1) % amenities.length
         );
-      }, 1500); // Change the interval (in milliseconds) to your desired speed
+      }, 1000); // Change the interval (in milliseconds) to your desired speed
       return () => clearInterval(interval);
     } else {
       setCurrentAmenityIndex(0);
