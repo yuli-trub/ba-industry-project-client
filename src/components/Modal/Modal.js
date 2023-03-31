@@ -2,6 +2,21 @@ import React, { useState } from "react";
 import line from "../../assets/images/line.png";
 import GallerySlider from "../GallerySlider/GallerySlider";
 import "./Modal.scss";
+import baggage from "../../assets/icons/baggage.png";
+import point from "../../assets/icons/point.svg";
+import drink from "../../assets/icons/drink.svg";
+import key from "../../assets/icons/key.svg";
+import security from "../../assets/icons/security.svg";
+import bottle from "../../assets/icons/bottle.svg";
+import briefcase from "../../assets/icons/briefcase.svg";
+import cake from "../../assets/icons/cake.svg";
+import cart from "../../assets/icons/cart.svg";
+import door from "../../assets/icons/door.svg";
+import group from "../../assets/icons/group.svg";
+import sanitizer from "../../assets/icons/hand-sanitizer-line.svg";
+import macbook from "../../assets/icons/macbook-line.svg";
+import restaurant from "../../assets/icons/restaurant-line.svg";
+import user from "../../assets/icons/user.svg";
 
 const Modal = () => {
   const [showPreFlight, setShowPreFlight] = useState(true);
@@ -54,97 +69,97 @@ const Modal = () => {
           </ul>
           <ul className={`features ${showPreFlight ? "" : "features--hidden"}`}>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={point} alt="user" className="features__icon" />
               <p className="features__text">
                 Dedicated check-in at any airport
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={baggage} alt="baggage" className="features__icon" />
               <p className="features__text">
                 Greater baggage hold allowance, with two bags included at 32kg
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={security} alt="security" className="features__icon" />
               <p className="features__text">
                 Fast track through security and arriva
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={drink} alt="drink" className="features__icon" />
               <p className="features__text">
                 Pre-take off drink provided when you board
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={key} alt="key" className="features__icon" />
               <p className="features__text">Lounge access</p>
             </li>
           </ul>
           <ul className={`features ${showInFlight ? "" : "features--hidden"}`}>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={macbook} alt="laptop" className="features__icon" />
               <p className="features__text">
                 Work or sleep from your seat with a fully lie-flat bed
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={door} alt="door" className="features__icon" />
               <p className="features__text">
                 Club Suite: window and aisle access from all suites, with a
                 sliding privacy door and generous storage{" "}
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={bottle} alt="bottle" className="features__icon" />
               <p className="features__text">
                 A bespoke selection of high-quality wines, chosen by our very
                 own Master of Wine
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={user} alt="somelier" className="features__icon" />
               <p className="features__text">
                 Sommelier trained crew & trained to have every meal placed
                 perfectly
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={restaurant} alt="food" className="features__icon" />
               <p className="features__text">
                 Premium multi-course dining experience, with express and sleeper
                 options to fit your needs
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={cake} alt="cake" className="features__icon" />
               <p className="features__text">
                 Access to the Club Kitchen onboard, for a range of on-demand
                 snacks and refreshments
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={sanitizer} alt="sanitizer" className="features__icon" />
               <p className="features__text">
                 Amenity kit, bedding and pillow designed for you by The White
                 Company
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={briefcase} alt="briefcase" className="features__icon" />
               <p className="features__text">
                 Increased overhead locker space for your belongings
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={group} alt="gtoup" className="features__icon" />
               <p className="features__text">
                 Priority rebooking and premium hotel offered when disrupted
               </p>
             </li>
             <li className="features__item">
-              <img src="" alt="" className="features__icon" />
+              <img src={cart} alt="cart" className="features__icon" />
               <p className="features__text">
                 Priority baggage arrival at T5, for a stress-free end to your
                 journey
