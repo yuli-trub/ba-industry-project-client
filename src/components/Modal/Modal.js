@@ -124,12 +124,12 @@ const Modal = ({ setModalIsShown }) => {
             </Link>
           </div>
         </div>
-        <div className={`content £{isEconomy ? "content--hidden" : ""}`}>
+        <div className={`content ${isEconomy ? "content--hidden" : ""}`}>
           <div className="content__info">
             <ul className="options">
               <li
                 onClick={toggleLeftHandle}
-                className={`options__item £{
+                className={`options__item ${
                   showPreFlight ? "options__item--active" : ""
                 }`}
               >
@@ -137,7 +137,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
               <li
                 onClick={toggleRightHandle}
-                className={`options__item £{
+                className={`options__item ${
                   showInFlight ? "options__item--active" : ""
                 }`}
               >
@@ -145,7 +145,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features £{showPreFlight ? "" : "features--hidden"}`}
+              className={`features ${showPreFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={point} alt="user" className="features__icon" />
@@ -177,7 +177,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features £{showInFlight ? "" : "features--hidden"}`}
+              className={`features ${showInFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={macbook} alt="laptop" className="features__icon" />
@@ -261,12 +261,12 @@ const Modal = ({ setModalIsShown }) => {
           </div>
         </div>
 
-        <div className={`content £{isPriority ? "content--hidden" : ""}`}>
+        <div className={`content ${isPriority ? "content--hidden" : ""}`}>
           <div className="content__info">
             <ul className="options">
               <li
                 onClick={toggleLeftHandle}
-                className={`options__item £{
+                className={`options__item ${
                   showPreFlight ? "options__item--active" : ""
                 }`}
               >
@@ -274,7 +274,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
               <li
                 onClick={toggleRightHandle}
-                className={`options__item £{
+                className={`options__item ${
                   showInFlight ? "options__item--active" : ""
                 }`}
               >
@@ -282,7 +282,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features £{showPreFlight ? "" : "features--hidden"}`}
+              className={`features ${showPreFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={hospitality} alt="user" className="features__icon" />
@@ -292,7 +292,7 @@ const Modal = ({ setModalIsShown }) => {
               </li>
             </ul>
             <ul
-              className={`features £{showInFlight ? "" : "features--hidden"}`}
+              className={`features ${showInFlight ? "" : "features--hidden"}`}
             >
               <li className="features__item">
                 <img src={door} alt="door" className="features__icon" />
